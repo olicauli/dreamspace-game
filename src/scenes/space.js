@@ -11,8 +11,8 @@ export default class Space extends Phaser.Scene
 
     preload()
     {
-        this.load.image('floor', 'assets/test-floor.png');
-        this.load.spritesheet('avatar', 'assets/avatarsheet.png',
+        this.load.image('floor', 'src/assets/test-floor.png');
+        this.load.spritesheet('avatar', 'src/assets/avatarsheet.png',
         {frameWidth: 32, frameHeight: 32});
     }
 
