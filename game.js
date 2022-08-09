@@ -13,7 +13,7 @@ var config = {
             debug: false
         }
     },
-    scene: [TestGame]
+    scene: [SceneOne]
 };
 
 var game = new Phaser.Game(config);
