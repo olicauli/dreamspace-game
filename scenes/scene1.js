@@ -72,6 +72,9 @@ class SceneOne extends Phaser.Scene
 
     update()
     {
+        this.cameras.main.centerOn(this.player.x, this.player.y);
+        //this.cameras.main.startFollow(this.player, true);
+
         //rrgghh shouldnt this be a switch case statement??
         if (this.cursors.up.isDown)
         {
