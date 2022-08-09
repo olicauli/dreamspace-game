@@ -10,4 +10,4 @@ hi this is just a repo i am using to learn to phaserjs
 
 ## how to set up
 1. clone the repo
-2. run index.html on a local web server
+2. run index.html on a local web server (i use vscodes live server extension but anything will do)
