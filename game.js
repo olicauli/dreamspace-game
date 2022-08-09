@@ -2,6 +2,8 @@
 
 //import { TestGame } from "testgamescene.js";
 
+import Space from './scenes/space.js';
+
 var config = {
     type: Phaser.AUTO,
     width: 800,
@@ -14,7 +16,7 @@ var config = {
             debug: false
         }
     },
-    scene: [SceneOne]
+    scene: [Space]
 };
 
 var game = new Phaser.Game(config);

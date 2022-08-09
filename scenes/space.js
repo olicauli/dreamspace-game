@@ -1,10 +1,10 @@
 //const { Phaser } = require("../phaser");
 
-class SceneOne extends Phaser.Scene 
+export default class Space extends Phaser.Scene 
 {
     constructor()
     {
-        super();
+        super('space');
         this.player = null;
         this.cursors = null;
     }
@@ -29,6 +29,7 @@ class SceneOne extends Phaser.Scene
         //***PLAYER STUFF***
         this.player = this.physics.add.sprite(400, 200, 'avatar');
         this.player.setScale(2);
+        this.player.setCollideWorldBounds(true);
         //this.player.body.allowGravity = false;
 
         this.anims.create({
