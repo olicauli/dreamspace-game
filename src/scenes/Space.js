@@ -1,21 +1,12 @@
-//const { Phaser } = require("../phaser");
-
 //oh god i need to put the avatar in its own file
-
+import Player from '../objects/Player.js';
 export default class Space extends Phaser.Scene 
 {
     constructor()
     {
-        super('space');
+        super('Space');
         this.player = null;
         this.cursors = null;
-    }
-
-    preload()
-    {
-        this.load.image('floor', 'src/assets/test-floor.png');
-        this.load.spritesheet('avatar', 'src/assets/avatarsheet.png',
-        {frameWidth: 32, frameHeight: 32});
     }
 
     create()
@@ -28,49 +19,15 @@ export default class Space extends Phaser.Scene
 
 
         //***PLAYER STUFF***
+        this.player = new Player(this, 400, 200);
+        /*
         this.player = this.physics.add.sprite(400, 200, 'avatar');
         this.player.setScale(2);
         this.cameras.main.startFollow(this.player);
-        console.log(`player.x: ${this.player.x}, player.y: ${this.player.y}`);
         this.player.setCollideWorldBounds(true);
-
-        this.anims.create({
-            key: 'down',
-            frames: this.anims.generateFrameNumbers('avatar', {frames: [0, 1, 2, 3]}),
-            frameRate: 10,
-            repeat: -1
-        })
-
-        this.anims.create({
-            key: 'left',
-            frames: this.anims.generateFrameNumbers('avatar', {frames: [4, 5, 6, 7]}),
-            frameRate: 10,
-            repeat: -1
-        })
-
-        this.anims.create({
-            key: 'right',
-            frames: this.anims.generateFrameNumbers('avatar', {frames: [8, 9, 10, 11]}),
-            frameRate: 10,
-            repeat: -1
-        })
-
-        this.anims.create({
-            key: 'up',
-            frames: this.anims.generateFrameNumbers('avatar', {frames: [12, 13, 14, 15]}),
-            frameRate: 10,
-            repeat: -1
-        })
-
-        this.anims.create ({
-            key: 'idle',
-            frames: this.anims.generateFrameNumbers('avatar', {frames: [0]}),
-            frameRate: 20,
-            repeat: -1
-        })
+        */
 
         this.cursors = this.input.keyboard.createCursorKeys();
-        //this.cameras.main.startFollow(this.)
     }
 
     update()
