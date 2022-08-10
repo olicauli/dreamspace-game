@@ -4,7 +4,8 @@ export default class Player extends Phaser.Physics.Arcade.Sprite
     {
         super(scene, x, y, 'avatar'); //this would be perfect if 'avatar' fucking worekd RAAAAGH
         scene.physics.add.existing(this);
-        scene.add.existing(this);
+        scene.add.existing(this); //do not remove this line or the one above
+                                  //if u do my poor boy goes completley invisible
         this.setScale(2);
         this.setCollideWorldBounds(true);
     }
