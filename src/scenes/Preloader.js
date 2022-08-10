@@ -7,8 +7,14 @@ export default class Preloader extends Phaser.Scene
     preload()
     {
         this.load.image('floor', 'src/assets/test-floor.png');
+        this.load.image('door', 'src/assets/door.png');
+        this.load.spritesheet('arrowkeys', 'src/assets/keysheet.png', 
+        {frameWidth: 31.5, frameHeight: 28});
         this.load.spritesheet('avatar', 'src/assets/avatarsheet.png',
         {frameWidth: 32, frameHeight: 32});
+
+        this.load.audio('test-sfx', 'src/assets/tentacle-flop.mp3');
+        this.load.audio('theme', 'src/assets/faultlines-asher-fulero.mp3');
     }
     create()
     {
