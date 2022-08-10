@@ -1,3 +1,10 @@
+//NOTE: THIS IS MOSTLY NOT MY CODE.
+//this is the test game from the Phaser 3 tutorial, found here:
+//https://phaser.io/tutorials/making-your-first-phaser-3-game/part1
+
+//i added a bunch of comments as i did it bc thats how i internalize things i suppose
+//it's mostly kept as a reference for how tf the code works
+
 class TestGame extends Phaser.Scene
 {
 
