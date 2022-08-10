@@ -8,7 +8,7 @@ a little browser game written using the Phaser 3 javascript framework!
 - [how to play](#how-to-play)
 - [support](#support)
 - [to-do list](#to-do-list)
-- [contributions](#contributions)
+- [credits](#credits)
 
 ## installation
 1. clone the repo to a folder of your choice
