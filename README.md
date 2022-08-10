@@ -25,9 +25,8 @@ if you would prefer to more privately report the bug, you can email me at olicau
 ## to-do list
 1. add a boot screen
 2. add a menu screen
-3. add interactable objects
-4. add music
-5. perhaps some sfx?
+3. fix avatarsheet deadspace
+4. fix interactions
 
 ## contributions
 
