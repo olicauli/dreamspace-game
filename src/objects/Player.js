@@ -3,13 +3,10 @@ export default class Player extends Phaser.Physics.Arcade.Sprite
     constructor(scene, x, y)
     {
         super(scene, x, y, 'avatar'); //this would be perfect if 'avatar' fucking worekd RAAAAGH
-        //console.log(this);
         scene.physics.add.existing(this);
         scene.add.existing(this);
         this.setScale(2);
         this.setCollideWorldBounds(true);
-        //this.cursors = this.scene.input.keyboard.createCursorKeys();
-        //return this;
     }
 
     idle()
