@@ -15,7 +15,7 @@ a little browser game written using the Phaser 3 javascript framework!
 2. run index.html on a local web server (i use vscodes live server extension but anything will do)
 
 ## how to play
-use the arrow keys to move around, and z to interaction with other objects or creatures!
+use the arrow keys to move around, and z to interaction with other objects!
 
 ## support
 if you encounter a bug or problem playing the game, you can [create a new issue](https://github.com/olicauli/dreamspace-game/issues).
@@ -25,8 +25,8 @@ if you would prefer to more privately report the bug, you can email me at olicau
 ## to-do list
 1. add a boot screen
 2. add a menu screen
-3. fix avatarsheet deadspace
-4. fix interactions
+3. fix hitboxes
+4. make a proper interaction
 
 ## credits
 
