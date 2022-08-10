@@ -28,7 +28,7 @@ if you would prefer to more privately report the bug, you can email me at olicau
 3. fix avatarsheet deadspace
 4. fix interactions
 
-## contributions
+## credits
 
 code and art made mostly by olicauli (so far!)
 
