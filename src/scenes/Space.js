@@ -18,7 +18,7 @@ export default class Space extends Phaser.Scene
         this.testSfx = this.sound.add('test-sfx');
         console.log(this.testSfx);
         //this.testSfx.play();
-        let bgm = this.sound.add('theme');
+        let bgm = this.sound.add('bgm');
         console.log(bgm);
         bgm.pauseOnBlur = false; //doenst seem to change anything but theres no reason for this
                                  //to be wrong... Hmmm
@@ -54,13 +54,6 @@ export default class Space extends Phaser.Scene
 
         this.cursors = this.input.keyboard.createCursorKeys();
         this.interactKey = this.input.keyboard.addKey('Z');
-
-        /*
-        function setTouching(player, obstacle)
-        {
-            player.touching = true;
-        }
-        */
     }
 
     update()

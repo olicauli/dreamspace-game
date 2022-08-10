@@ -32,3 +32,9 @@ if you would prefer to more privately report the bug, you can email me at olicau
 ## contributions
 
 code and art made mostly by olicauli (so far!)
+
+the BGM (Magic Forest) is by kevin macleod!
+
+Magic Forest Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0
+http://creativecommons.org/licenses/by/3.0/

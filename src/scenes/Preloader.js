@@ -13,8 +13,8 @@ export default class Preloader extends Phaser.Scene
         this.load.spritesheet('avatar', 'src/assets/avatarsheet.png',
         {frameWidth: 32, frameHeight: 32});
 
-        this.load.audio('test-sfx', 'src/assets/tentacle-flop.mp3');
-        this.load.audio('theme', 'src/assets/faultlines-asher-fulero.mp3');
+        this.load.audio('test-sfx', 'src/assets/bap.wav');
+        this.load.audio('bgm', 'src/assets/magicforest.mp3');
     }
     create()
     {
