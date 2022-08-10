@@ -2,14 +2,22 @@ export default class Player extends Phaser.Physics.Arcade.Sprite
 {
     constructor(scene, x, y)
     {
-        super(scene, x, y, 'avatar');
+        super(scene, x, y, 'avatar'); //this would be perfect if 'avatar' fucking worekd RAAAAGH
+        //console.log(this);
         scene.physics.add.existing(this);
+        scene.add.existing(this);
         this.setScale(2);
         this.setCollideWorldBounds(true);
         //this.cursors = this.scene.input.keyboard.createCursorKeys();
-        return this;
+        //return this;
     }
-/*
+
+    idle()
+    {
+        this.setVelocity(0);
+        this.anims.pause();
+    }
+    
     moveUp()
     {
         this.setVelocity(0, -100);
@@ -22,13 +30,12 @@ export default class Player extends Phaser.Physics.Arcade.Sprite
     }
     moveLeft()
     {
-        this.setVelocity(100, 0);
+        this.setVelocity(-100, 0);
         this.anims.play('left', true);
     }
     moveRight()
     {
-        this.setVelocity(-100, 0);
+        this.setVelocity(100, 0);
         this.anims.play('right', true);
     }
-    */
 }

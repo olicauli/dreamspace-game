@@ -20,13 +20,15 @@ export default class Space extends Phaser.Scene
 
         //***PLAYER STUFF***
         this.player = new Player(this, 400, 200);
+        //let bingus = this.physics.add.sprite(400, 200, 'avatar');
+        //console.log(bingus);
         /*
         this.player = this.physics.add.sprite(400, 200, 'avatar');
         this.player.setScale(2);
-        this.cameras.main.startFollow(this.player);
         this.player.setCollideWorldBounds(true);
         */
-
+        
+        this.cameras.main.startFollow(this.player);
         this.cursors = this.input.keyboard.createCursorKeys();
     }
 
@@ -38,28 +40,31 @@ export default class Space extends Phaser.Scene
         //rrgghh shouldnt this be a switch case statement??
         if (this.cursors.up.isDown)
         {
-            this.player.setVelocity(0, -100);
-            this.player.anims.play('up', true);
+            this.player.moveUp();
+            //this.player.setVelocity(0, -100);
+            //this.player.anims.play('up', true);
         }
         else if (this.cursors.down.isDown)
         {
-            this.player.setVelocity(0, 100);
-            this.player.anims.play('down', true);
+            this.player.moveDown();
+            //this.player.setVelocity(0, 100);
+            //this.player.anims.play('down', true);
         }
         else if (this.cursors.left.isDown)
         {
-            this.player.setVelocity(-100, 0);
-            this.player.anims.play('left', true);
+            this.player.moveLeft();
+            //this.player.setVelocity(-100, 0);
+            //this.player.anims.play('left', true);
         }
         else if (this.cursors.right.isDown)
         {
-            this.player.setVelocity(100, 0);
-            this.player.anims.play('right', true);
+            this.player.moveRight();
+            //this.player.setVelocity(100, 0);
+            //this.player.anims.play('right', true);
         }
         else 
         {
-            this.player.setVelocity(0);
-            this.player.anims.pause();
+            this.player.idle();
         }
     }
 
