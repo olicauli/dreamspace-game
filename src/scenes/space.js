@@ -1,5 +1,7 @@
 //const { Phaser } = require("../phaser");
 
+//oh god i need to put the avatar in its own file
+
 export default class Space extends Phaser.Scene 
 {
     constructor()
@@ -19,9 +21,8 @@ export default class Space extends Phaser.Scene
     create()
     {
         this.add.image(0, 0, 'floor').setOrigin(0, 0);
-        this.cameras.main.setBounds(0, 0, 500, 500);
+        this.cameras.main.setBounds(0, 0, 800, 600);
         this.cameras.main.setZoom(1.5);
-        this.cameras.main.centerOn(0, 0);
         //const text = this.add.text(360, 500).setText(`x: ${this.cameras.main.scrollX}, y: ${this.cameras.main.scrollY}`);
         //text.setShadow(1, 1, '#000000', 2);
 
@@ -29,8 +30,9 @@ export default class Space extends Phaser.Scene
         //***PLAYER STUFF***
         this.player = this.physics.add.sprite(400, 200, 'avatar');
         this.player.setScale(2);
+        this.cameras.main.startFollow(this.player);
+        console.log(`player.x: ${this.player.x}, player.y: ${this.player.y}`);
         this.player.setCollideWorldBounds(true);
-        //this.player.body.allowGravity = false;
 
         this.anims.create({
             key: 'down',
@@ -73,8 +75,8 @@ export default class Space extends Phaser.Scene
 
     update()
     {
-        this.cameras.main.centerOn(this.player.x, this.player.y);
-        //this.cameras.main.startFollow(this.player, true);
+        //this.cameras.main.centerOn(this.player.x, this.player.y);
+        
 
         //rrgghh shouldnt this be a switch case statement??
         if (this.cursors.up.isDown)
