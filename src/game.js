@@ -2,19 +2,23 @@
 
 //import { TestGame } from "testgamescene.js";
 
-var config = {
+import Preloader from './scenes/Preloader.js';
+import Space from './scenes/Space.js';
+
+const config = {
     type: Phaser.AUTO,
     width: 800,
     height: 600,
+    pixelArt: true,
     physics: {
         default: 'arcade',
         arcade: {
-            gravity: {y:300},
+            gravity: {y:0},
             debug: false
         }
     },
-    scene: [SceneOne]
+    scene: [Preloader, Space]
 };
 
-var game = new Phaser.Game(config);
+let game = new Phaser.Game(config);
 

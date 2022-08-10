@@ -22,6 +22,7 @@ class TestGame extends Phaser.Scene
                     //things in preload
     {
         this.add.image(0, 0, 'sky').setOrigin(0, 0);
+        this.world.setBounds(0, 0, 800, 600);
         //this.add.image(400, 300, 'star');
 
         //PLATFOMS CODE
