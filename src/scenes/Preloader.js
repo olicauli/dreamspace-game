@@ -14,35 +14,35 @@ export default class Preloader extends Phaser.Scene
     {
         this.anims.create({
             key: 'down',
-            frames: this.anims.generateFrameNumbers('avatar', {frames: [0, 1, 2, 3]}),
+            frames: this.anims.generateFrameNumbers('avatar', {start: 0, end: 3}),
             frameRate: 10,
             repeat: -1
         })
 
         this.anims.create({
             key: 'left',
-            frames: this.anims.generateFrameNumbers('avatar', {frames: [4, 5, 6, 7]}),
+            frames: this.anims.generateFrameNumbers('avatar', {start: 4, end: 7}),
             frameRate: 10,
             repeat: -1
         })
 
         this.anims.create({
             key: 'right',
-            frames: this.anims.generateFrameNumbers('avatar', {frames: [8, 9, 10, 11]}),
+            frames: this.anims.generateFrameNumbers('avatar', {start: 8, end: 11}),
             frameRate: 10,
             repeat: -1
         })
 
         this.anims.create({
             key: 'up',
-            frames: this.anims.generateFrameNumbers('avatar', {frames: [12, 13, 14, 15]}),
+            frames: this.anims.generateFrameNumbers('avatar', {start: 12, end: 15}),
             frameRate: 10,
             repeat: -1
         })
 
         this.anims.create ({
             key: 'idle',
-            frames: this.anims.generateFrameNumbers('avatar', {frames: [0]}),
+            frames: this.anims.generateFrameNumbers('avatar', {frame: 0}),
             frameRate: 20,
             repeat: -1
         })
