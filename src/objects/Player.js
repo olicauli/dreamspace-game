@@ -7,6 +7,8 @@ export default class Player extends Phaser.Physics.Arcade.Sprite
         scene.add.existing(this); //do not remove this line or the one above
                                   //if u do my poor boy goes completley invisible
         this.setScale(2);
+        this.setSize(12, 24); //sets the hitbox size
+        //this.setOffset(10, 24);
         this.setCollideWorldBounds(true);
         this.touching = false;
     }

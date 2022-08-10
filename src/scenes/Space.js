@@ -15,11 +15,19 @@ export default class Space extends Phaser.Scene
     create()
     {
         this.add.image(0, 0, 'floor').setOrigin(0, 0);
+        let graphics = this.add.graphics();
+        let thickness = 4;
+        let color = 0x000000;
+        let alpha = 1;
+
+        graphics.lineStyle(thickness, color, alpha);
+        graphics.strokeRect(0, 0, 800, 600);
+
         this.testSfx = this.sound.add('test-sfx');
-        console.log(this.testSfx);
+        //console.log(this.testSfx);
         //this.testSfx.play();
         let bgm = this.sound.add('bgm');
-        console.log(bgm);
+        //console.log(bgm);
         bgm.pauseOnBlur = false; //doenst seem to change anything but theres no reason for this
                                  //to be wrong... Hmmm
         bgm.play({
@@ -31,7 +39,7 @@ export default class Space extends Phaser.Scene
         obstacle.create(740, 300, 'door').setScale(2);
         obstacle.create(60, 200, 'door').setScale(2).setFlipX(true);
         obstacle.create(400, 60, 'door').setScale(2);
-        obstacle.create(250, 50, 'arrowkeys', 0);
+        obstacle.create(250, 50, 'arrowkeys', 0).setImmovable(true);
         obstacle.create(200, 320, 'arrowkeys', 1);
         obstacle.create(570, 370, 'arrowkeys', 2);
         obstacle.create(560, 130, 'arrowkeys', 3);
@@ -61,8 +69,8 @@ export default class Space extends Phaser.Scene
         if (this.player.touching && this.interactKey.isDown)
         {
             this.testSfx.play();
+            this.player.touching = false;
         }
-        this.player.touching = false;
         this.player.movement(this.cursors);
     }
 

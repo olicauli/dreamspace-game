@@ -8,10 +8,17 @@ export default class Preloader extends Phaser.Scene
     {
         this.load.image('floor', 'src/assets/test-floor.png');
         this.load.image('door', 'src/assets/door.png');
+        /*
         this.load.spritesheet('arrowkeys', 'src/assets/keysheet.png', 
         {frameWidth: 31.5, frameHeight: 28});
+        */
+        /*
         this.load.spritesheet('avatar', 'src/assets/avatarsheet.png',
         {frameWidth: 32, frameHeight: 32});
+        */
+        this.load.atlas('avatar', 'src/assets/avatar.png', 'src/assets/avatar.json');
+        this.load.atlas('arrowkeys', 'src/assets/arrowkeys.png', 'src/assets/arrowkeys.json');
+        console.log(this.textures.get('avatar').getFrameNames());
 
         this.load.audio('test-sfx', 'src/assets/bap.wav');
         this.load.audio('bgm', 'src/assets/magicforest.mp3');
@@ -27,14 +34,14 @@ export default class Preloader extends Phaser.Scene
 
         this.anims.create({
             key: 'left',
-            frames: this.anims.generateFrameNumbers('avatar', {start: 4, end: 7}),
+            frames: this.anims.generateFrameNumbers('avatar', {start: 8, end: 11}),
             frameRate: 10,
             repeat: -1
         })
 
         this.anims.create({
             key: 'right',
-            frames: this.anims.generateFrameNumbers('avatar', {start: 8, end: 11}),
+            frames: this.anims.generateFrameNumbers('avatar', {start: 4, end: 7}),
             frameRate: 10,
             repeat: -1
         })
