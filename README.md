@@ -1,5 +1,5 @@
 # dreamspace game!
-![a little black silhoutte with a halo in the dreamspace](https://cdn.discordapp.com/attachments/930384259036901399/1006758397649100880/Screenshot_2022-08-09_210536.png)
+<img src="https://cdn.discordapp.com/attachments/930384259036901399/1006758397649100880/Screenshot_2022-08-09_210536.png" alt="a little black silhoutte with a halo in the dreamspace" width="300"/>
 
 a little browser game written using the Phaser 3 javascript framework!
 
