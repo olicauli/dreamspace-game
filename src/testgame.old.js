@@ -119,6 +119,8 @@ class TestGame extends Phaser.Scene
 
     update ()
     {
+        
+
         if (this.cursors.left.isDown)
         {
             this.player.setVelocityX(-160);
