@@ -4,7 +4,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = 
 {
     entry: './src/game.js',
-    mode: 'development',
+    mode: 'production',
     //devtool: 'inline-source-map', //enable this when debugging
     devServer: 
     {
