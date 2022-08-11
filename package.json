@@ -1,11 +1,13 @@
 {
   "name": "dreamspace-game",
   "version": "0.0.2",
-  "description": "<img src=\"https://cdn.discordapp.com/attachments/930384259036901399/1006758397649100880/Screenshot_2022-08-09_210536.png\" alt=\"a little black silhoutte with a halo in the dreamspace\" width=\"350\"/>",
+  "description": "a phaser3 game",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "webpack",
+    "watch": "webpack --watch",
+    "start": "webpack serve --open"
   },
   "repository": {
     "type": "git",
@@ -22,7 +24,8 @@
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.74.0",
-    "webpack-cli": "^4.10.0"
+    "webpack-cli": "^4.10.0",
+    "webpack-dev-server": "^4.10.0"
   },
   "dependencies": {
     "phaser": "^3.55.2"

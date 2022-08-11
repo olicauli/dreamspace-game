@@ -5,17 +5,21 @@ module.exports =
 {
     entry: './src/game.js',
     mode: 'development',
+    //devtool: 'inline-source-map', //enable this when debugging
+    devServer: 
+    {
+        static:'./dist',
+    },
     plugins: 
     [
         new HtmlWebpackPlugin({
-            title: 'halospace',
+            template: 'src/index.html', //generates a new index.html based on the index.html in src
         }),
     ],
     output: 
     {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
-        //publicPath: '/assets/',
         clean: true,
     },
     module: 
