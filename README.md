@@ -12,7 +12,8 @@ a little browser game written using the Phaser 3 javascript framework!
 
 ## installation
 1. clone the repo to a folder of your choice
-2. run index.html on a local web server (i use vscodes live server extension but anything will do)
+2. navigate to the repo folder from your terminal and run the command `npm install`
+3. run the command `npm run start`
 
 ## how to play
 use the arrow keys to move around, and z to interaction with other objects!
