@@ -1,3 +1,14 @@
+import floor from '../assets/img/test-floor.png';
+import door from '../assets/img/door.png';
+import avatar from '../assets/img/spritesheets/avatar.png';
+import arrowkeys from '../assets/img/spritesheets/arrowkeys.png';
+
+import avatarjson from '../assets/img/spritesheets/avatar.json';
+import arrowkeysjson from '../assets/img/spritesheets/arrowkeys.json'
+
+import bap from '../assets/audio/bap.wav';
+import bgm from '../assets/audio/magicforest.mp3';
+
 export default class Preloader extends Phaser.Scene 
 {
     constructor()
@@ -6,22 +17,14 @@ export default class Preloader extends Phaser.Scene
     }
     preload()
     {
-        this.load.image('floor', 'src/assets/test-floor.png');
-        this.load.image('door', 'src/assets/door.png');
-        /*
-        this.load.spritesheet('arrowkeys', 'src/assets/keysheet.png', 
-        {frameWidth: 31.5, frameHeight: 28});
-        */
-        /*
-        this.load.spritesheet('avatar', 'src/assets/avatarsheet.png',
-        {frameWidth: 32, frameHeight: 32});
-        */
-        this.load.atlas('avatar', 'src/assets/avatar.png', 'src/assets/avatar.json');
-        this.load.atlas('arrowkeys', 'src/assets/arrowkeys.png', 'src/assets/arrowkeys.json');
-        console.log(this.textures.get('avatar').getFrameNames());
+        this.load.image('floor', floor);
+        this.load.image('door', door);
 
-        this.load.audio('test-sfx', 'src/assets/bap.wav');
-        this.load.audio('bgm', 'src/assets/magicforest.mp3');
+        this.load.atlas('avatar', avatar, avatarjson);
+        this.load.atlas('arrowkeys', arrowkeys, arrowkeysjson);
+
+        this.load.audio('test-sfx', bap);
+        this.load.audio('bgm', bgm);
     }
     create()
     {
@@ -60,7 +63,6 @@ export default class Preloader extends Phaser.Scene
             repeat: -1
         })
         
-        //console.log(this.scene);
         this.scene.start('Space');
     }
 }

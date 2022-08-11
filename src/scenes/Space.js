@@ -15,19 +15,18 @@ export default class Space extends Phaser.Scene
     create()
     {
         this.add.image(0, 0, 'floor').setOrigin(0, 0);
+
+        //draws a little border around the background
         let graphics = this.add.graphics();
         let thickness = 4;
         let color = 0x000000;
         let alpha = 1;
-
         graphics.lineStyle(thickness, color, alpha);
         graphics.strokeRect(0, 0, 800, 600);
 
+        //audio stuff
         this.testSfx = this.sound.add('test-sfx');
-        //console.log(this.testSfx);
-        //this.testSfx.play();
         let bgm = this.sound.add('bgm');
-        //console.log(bgm);
         bgm.pauseOnBlur = false; //doenst seem to change anything but theres no reason for this
                                  //to be wrong... Hmmm
         bgm.play({
@@ -35,6 +34,8 @@ export default class Space extends Phaser.Scene
             volume: 0.2,
         });
 
+        //create the objects around the map
+        //note: shouldnt there be a better way to do this? Hrmm...
         let obstacle = this.physics.add.staticGroup();
         obstacle.create(740, 300, 'door').setScale(2);
         obstacle.create(60, 200, 'door').setScale(2).setFlipX(true);
@@ -48,13 +49,13 @@ export default class Space extends Phaser.Scene
         this.add.text(220, 470, "there isn't much here yet, but please,");
         this.add.text(290, 520, "make yourself at home.");
 
+        //player, collider, cameras, input
         this.player = new Player(this, 400, 200);
         
         this.physics.add.collider(this.player, obstacle, (player)=>
         {
             player.touching = true;
         });
-        //this.overlapped = this.physics.add.overlap(this.player, obstacle);
 
         this.cameras.main.setBounds(0, 0, 800, 600);
         this.cameras.main.setZoom(1.5);
@@ -66,6 +67,9 @@ export default class Space extends Phaser.Scene
 
     update()
     {
+        //temporary testing interact function;
+        //there's probably something built in in phaser that works
+        //better, but i haven't wrangled it out of the docs and examples yet
         if (this.player.touching && this.interactKey.isDown)
         {
             this.testSfx.play();
