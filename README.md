@@ -13,7 +13,7 @@ a little browser game written using the Phaser 3 javascript framework!
 ## installation
 1. clone the repo to a folder of your choice
 2. navigate to the repo folder from your terminal and run the command `npm install`
-3. run the command `npm run start`
+3. run the command `npm run start` to launch the web server and start the game!
 
 ## how to play
 use the arrow keys to move around, and z to interaction with other objects!
