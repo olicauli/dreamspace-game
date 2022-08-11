@@ -1,12 +1,22 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = 
 {
     entry: './src/game.js',
+    mode: 'development',
+    plugins: 
+    [
+        new HtmlWebpackPlugin({
+            title: 'halospace',
+        }),
+    ],
     output: 
     {
         filename: 'bundle.js',
         path: path.resolve(__dirname, 'dist'),
+        //publicPath: '/assets/',
+        clean: true,
     },
     module: 
     {
@@ -17,7 +27,7 @@ module.exports =
         },
         {
             test: /\.(mp3|wav)/,
-            loader: 'file-loader',
-        }]
+            type: 'asset/resource',
+        }],
     }
 };

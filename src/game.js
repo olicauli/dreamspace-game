@@ -4,7 +4,7 @@ import Phaser from 'phaser';
 
 //import { TestGame } from "testgamescene.js";
 
-import Preloader from './scenes/Preloader.js.old';
+import Preloader from './scenes/Preloader.js';
 import Space from './scenes/Space.js';
 
 const config = {
