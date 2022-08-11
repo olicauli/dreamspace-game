@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = 
 {
@@ -16,9 +17,14 @@ module.exports =
             template: 'src/index.html', //generates a new index.html based on the index.html in src
         }),
     ],
+    optimization: 
+    {
+        minimize: true,
+        minimizer: [new TerserPlugin()],
+    },
     output: 
     {
-        filename: 'bundle.js',
+        filename: 'bundle.min.js',
         path: path.resolve(__dirname, 'dist'),
         assetModuleFilename: 'assets/[hash][ext][query]',
         clean: true,
