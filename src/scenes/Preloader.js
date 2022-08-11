@@ -1,3 +1,14 @@
+import floor from '../assets/test-floor.png';
+import door from '../assets/door.png';
+import avatar from '../assets/avatar.png';
+import arrowkeys from '../assets/arrowkeys.png';
+
+import avatarjson from '../assets/avatar.json';
+import arrowkeysjson from '../assets/arrowkeys.json'
+
+import bap from '../assets/bap.wav';
+import bgm from '../assets/magicforest.mp3';
+
 export default class Preloader extends Phaser.Scene 
 {
     constructor()
@@ -6,8 +17,8 @@ export default class Preloader extends Phaser.Scene
     }
     preload()
     {
-        this.load.image('floor', 'src/assets/test-floor.png');
-        this.load.image('door', 'src/assets/door.png');
+        this.load.image('floor', floor);
+        this.load.image('door', door);
         /*
         this.load.spritesheet('arrowkeys', 'src/assets/keysheet.png', 
         {frameWidth: 31.5, frameHeight: 28});
@@ -16,12 +27,12 @@ export default class Preloader extends Phaser.Scene
         this.load.spritesheet('avatar', 'src/assets/avatarsheet.png',
         {frameWidth: 32, frameHeight: 32});
         */
-        this.load.atlas('avatar', 'src/assets/avatar.png', 'src/assets/avatar.json');
-        this.load.atlas('arrowkeys', 'src/assets/arrowkeys.png', 'src/assets/arrowkeys.json');
+        this.load.atlas('avatar', avatar, avatarjson);
+        this.load.atlas('arrowkeys', arrowkeys, arrowkeysjson);
         console.log(this.textures.get('avatar').getFrameNames());
 
-        this.load.audio('test-sfx', 'src/assets/bap.wav');
-        this.load.audio('bgm', 'src/assets/magicforest.mp3');
+        this.load.audio('test-sfx', bap);
+        this.load.audio('bgm', bgm);
     }
     create()
     {
