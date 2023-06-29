@@ -40,10 +40,10 @@ export default class Space extends Phaser.Scene
         obstacle.create(740, 300, 'door').setScale(2);
         obstacle.create(60, 200, 'door').setScale(2).setFlipX(true);
         obstacle.create(400, 60, 'door').setScale(2);
-        obstacle.create(250, 50, 'arrowkeys', 0).setImmovable(true);
-        obstacle.create(200, 320, 'arrowkeys', 1);
-        obstacle.create(570, 370, 'arrowkeys', 2);
-        obstacle.create(560, 130, 'arrowkeys', 3);
+        //obstacle.create(250, 50, 'arrowkeys', 0).setImmovable(true);
+        //obstacle.create(200, 320, 'arrowkeys', 1);
+        //obstacle.create(570, 370, 'arrowkeys', 2);
+        //obstacle.create(560, 130, 'arrowkeys', 3);
 
         this.add.text(365, 360, 'welcome.');
         this.add.text(220, 470, "there isn't much here yet, but please,");
