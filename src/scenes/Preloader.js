@@ -7,7 +7,7 @@ import avatarjson from '../assets/img/spritesheets/avatar.json';
 import arrowkeysjson from '../assets/img/spritesheets/arrowkeys.json'
 
 import bap from '../assets/audio/bap.wav';
-import bgm from '../assets/audio/magicforest.mp3';
+import bgm from '../assets/audio/hurtbgm.wav';
 
 export default class Preloader extends Phaser.Scene 
 {

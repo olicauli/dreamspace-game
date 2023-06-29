@@ -6,6 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
+    "dev": "webpack serve --mode=development",
     "watch": "webpack --watch",
     "start": "webpack serve --open"
   },
@@ -22,12 +23,12 @@
   "homepage": "https://github.com/olicauli/dreamspace#readme",
   "devDependencies": {
     "file-loader": "^6.2.0",
-    "html-webpack-plugin": "^5.5.0",
-    "webpack": "^5.76.0",
+    "html-webpack-plugin": "^5.5.3",
+    "webpack": "^5.88.1",
     "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.10.0"
+    "webpack-dev-server": "^4.15.1"
   },
   "dependencies": {
-    "phaser": "^3.55.2"
+    "phaser": "^3.60.0"
   }
 }
